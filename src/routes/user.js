@@ -26,7 +26,7 @@ userRouter.get("/user/requests/received", userAuth, async(req, res) => {
         req.statusCode(400).send("ERROR: " + err.message);
     }
 });
-
+// Get all the connections  for the loggedIn user
 userRouter.get("/user/connections", userAuth, async(req, res) => {
     try {
         const loggedInUser = req.user;
